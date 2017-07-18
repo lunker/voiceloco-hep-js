@@ -125,6 +125,19 @@ module.exports = {
 	payload_chunk.write(msg, 6, msg.length);
 	payload_chunk.writeUInt16BE(payload_chunk.length,4);
 
+/*
+	hep protocol ::
+		chunk_id : 0 //
+		chunk_type : 2
+		chunk_length : 4
+		chunk_data :6 
+*/
+	var call_state_chunk = new Buffer (6, rcinfo.call_state.length);
+	call_state_chunk.writeUInt16BE(0x0000, 0);
+	call_state_chunk.writeUInt16BE(0x00f3, 2);
+	call_state_chunk.write(rcinfo.call_state, 6, rcinfo.call_state.length);
+	call_state_chunk.writeUInt16BE(call_state_chunk.length,4);
+
 	if ((rcinfo.proto_type == 32 || rcinfo.proto_type == 35) && rcinfo.correlation_id.length) {
 		
 		// create correlation chunk
@@ -155,6 +168,7 @@ module.exports = {
 			capt_id,
 			auth_chunk,
 			correlation_chunk,
+			call_state_chunk,
 			mos
 		]);		
 		
@@ -200,7 +214,8 @@ module.exports = {
 			proto_type,
 			capt_id,
 			auth_chunk,
-			payload_chunk
+			payload_chunk,
+			call_state
 		]);
 		
 	}

@@ -24,7 +24,7 @@
     "logs",
     "cdr"
   ],
-  "author": " Lunker <dk910320@gmail.com>  ",
+  "author": "Lunker <dk910320@gmail.com>",
   "license": "GPLv2",
   "bugs": {
     "url": "https://github.com/lunker/voiceloco-hep-js/issuses"
