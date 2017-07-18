@@ -1,6 +1,6 @@
 {
-  "name": "hep-js",
-  "version": "0.0.6",
+  "name": "voiceloco-hep-js",
+  "version": "0.0.1",
   "description": "HEP3 Library for Node.JS",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/sipcapture/hep-js"
+    "url": "https://github.com/lunker/voiceloco-hep-js"
   },
   "keywords": [
     "hep",
@@ -24,10 +24,10 @@
     "logs",
     "cdr"
   ],
-  "author": "Lorenzo Mangani <lorenzo.mangani@gmail.com> (http://sipcapture.org/)",
+  "author": " Lunker <dk910320@gmail.com>  ",
   "license": "GPLv2",
   "bugs": {
-    "url": "https://github.com/sipcapture/hep-js/issues"
+    "url": "https://github.com/lunker/voiceloco-hep-js/issuses"
   },
   "devDependencies": {
     "mocha": "~2.2.5",
